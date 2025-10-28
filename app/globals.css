@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html, body { height: 100%; }
+body { @apply bg-surface-dark text-neutral-50 antialiased; }
+
+.section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100svh;
+}
+
+.snap-container {
+  scroll-snap-type: y mandatory;
+}
+
+.card {
+  @apply rounded-2xl bg-surface-dark/80 border border-neutral-800/60 p-4 shadow-card backdrop-blur;
+}
