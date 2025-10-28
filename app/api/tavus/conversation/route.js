@@ -1,5 +1,5 @@
 export async function POST() {
-  const url = "https://tavusapi.com/v2/conversations";
+  const url = 'https://tavusapi.com/v2/conversations'
   const body = {
     persona_id: process.env.TAVUS_PERSONA_ID,
     replica_id: process.env.TAVUS_REPLICA_ID,
@@ -29,24 +29,24 @@ Never hallucinate new resources — refer only to what’s in the current datase
 
 Maintain a helpful, grounded tone, like a knowledgeable caseworker guiding a client face-to-face.`,
     custom_greeting:
-      "Hello and welcome to Alameda County resource center. How can I help?",
-    document_ids: ["d4-5458a6e951ae"],
-  };
-
-  const res = await fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "x-api-key": process.env.TAVUS_API_KEY,
-    },
-    body: JSON.stringify(body),
-  });
-
-  if (!res.ok) {
-    const text = await res.text();
-    return new Response(JSON.stringify({ error: text }), { status: 500 });
+      'Hello and welcome to Alameda County resource center. How can I help?',
+    document_ids: ['d4-5458a6e951ae'],
   }
 
-  const json = await res.json();
-  return Response.json(json);
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': process.env.TAVUS_API_KEY,
+    },
+    body: JSON.stringify(body),
+  })
+
+  if (!res.ok) {
+    const text = await res.text()
+    return new Response(JSON.stringify({ error: text }), { status: 500 })
+  }
+
+  const json = await res.json()
+  return Response.json(json)
 }

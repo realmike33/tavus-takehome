@@ -1,16 +1,14 @@
-import "./globals.css";
+import './globalstyles.css'
 
 export const metadata = {
-  title: "Tavus-Powered Alameda Guide",
-  description: "Scroll-story demo: search → ask → Tavus video."
-};
+  title: 'Tavus-Powered Alameda Guide',
+  description: 'Scroll-story demo: search → ask → Tavus video.',
+}
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
-  );
+  )
 }

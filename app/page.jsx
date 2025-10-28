@@ -1,6 +1,6 @@
-"use client";
-import Console from "@/components/Console";
-import ProgressBar from "@/components/ProgressBar";
+'use client'
+import Console from '@/components/Console'
+import ProgressBar from '@/components/ProgressBar'
 
 export default function Page() {
   return (
@@ -27,7 +27,6 @@ export default function Page() {
       <section id="live" className="section px-6">
         <Console />
       </section>
-
     </main>
-  );
+  )
 }

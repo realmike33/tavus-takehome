@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start -p 3000",
     "lint": "prettier -c ./app ./components ./lib",
-    "format": "prettier --write"
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@daily-co/daily-js": "^0.85.0",
@@ -22,10 +22,6 @@
   },
   "devDependencies": {
     "autoprefixer": "10.4.20",
-    "eslint": "^9.11.1",
-    "eslint-config-next": "14.2.5",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-tailwindcss": "^3.18.2",
     "postcss": "8.4.47",
     "prettier": "^3.6.2",
     "tailwindcss": "3.4.14"
